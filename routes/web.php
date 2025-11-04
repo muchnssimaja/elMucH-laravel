@@ -18,3 +18,8 @@ Route::get('profile', function () {
     $nama = 'elMucH';
     return view('profile', compact('nama'));
 });
+
+// UTS
+Route::get('/uts', function () {
+    return view('uts.home');
+})->name('uts.home');
