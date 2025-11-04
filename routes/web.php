@@ -23,3 +23,11 @@ Route::get('profile', function () {
 Route::get('/uts', function () {
     return view('uts.home');
 })->name('uts.home');
+
+Route::get('/uts/produk', function () {
+    $produk = [
+        ['kode' => 'BRG001', 'nama' => 'Pena',  'jenis' => 'Alat tulis', 'harga' => 20000],
+        ['kode' => 'BRG002', 'nama' => 'Buku',  'jenis' => 'Alat tulis', 'harga' => 15000],
+    ];
+    return view('uts.produk', compact('produk'));
+})->name('uts.produk');
