@@ -33,5 +33,7 @@ Route::get('/uts/produk', function () {
 })->name('uts.produk');
 
 Route::get('/uts/form-produk', function () {
-    return view('uts.form-produk');
+    $jenisProduk = ['Alat tulis', 'Elektronik', 'Sembako'];
+    return view('uts.form-produk', compact('jenisProduk'));
 })->name('uts.form');
+

@@ -36,6 +36,9 @@
         <label class="form-label">Jenis Produk</label>
         <select class="form-select">
           <option selected disabled>Pilih Produk</option>
+          @for ($i = 0; $i < count($jenisProduk); $i++)
+            <option value="{{ $jenisProduk[$i] }}">{{ $jenisProduk[$i] }}</option>
+          @endfor
         </select>
       </div>
 
@@ -60,6 +63,7 @@
       <li class="mb-2"><a href="{{ url('/uts') }}" class="link-body-emphasis text-decoration-none">Home</a></li>
       <li class="mb-2"><a href="{{ url('/uts/produk') }}" class="link-secondary text-decoration-none">Produk</a></li>
     </ul>
+
     <form class="d-flex gap-2" role="search">
       <input class="form-control" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
