@@ -31,3 +31,7 @@ Route::get('/uts/produk', function () {
     ];
     return view('uts.produk', compact('produk'));
 })->name('uts.produk');
+
+Route::get('/uts/form-produk', function () {
+    return view('uts.form-produk');
+})->name('uts.form');
