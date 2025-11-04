@@ -12,7 +12,8 @@
 <nav class="navbar bg-body-tertiary border">
   <div class="container-fluid px-3">
     <span class="navbar-brand mb-0 h6">UTS Laravel</span>
-    <button type="button" class="btn btn-outline-secondary rounded-3">
+    <button class="btn btn-outline-secondary rounded-3" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
       <i class="bi bi-list"></i>
     </button>
   </div>
@@ -21,6 +22,24 @@
 <div class="bg-body-tertiary border-top">
   <div class="container py-3">
     <h1 class="display-5 fw-semibold">Halaman Home</h1>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarLabel">UTS Laravel</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-unstyled mb-4">
+      <li class="mb-2"><a href="{{ url('/uts') }}" class="link-body-emphasis text-decoration-none">Home</a></li>
+      <li class="mb-2"><a href="{{ url('/uts/produk') }}" class="link-secondary text-decoration-none">Produk</a></li>
+    </ul>
+
+    <form class="d-flex gap-2" role="search">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
   </div>
 </div>
 
